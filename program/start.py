@@ -53,11 +53,11 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f""" Salam {message.from_user.mention()}! **Snactus ⚡️ sizi salamlayır.**\n
+        f""" Salam {message.from_user.mention()}! **Gulsum ⚡️ sizi salamlayır.**\n
 Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izləyə bilərsiz.
 
 
- **Botun komandaları haqqında bilgi almaq üçün Komandalar butonuna basın!**
+ **Botun komandaları haqqında bilgi almaq üçün Rəsmi kanal butonuna basın!**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -70,7 +70,7 @@ Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izl�
                 [
                     InlineKeyboardButton(
                         "🧔🏻 Sahibim",
-                        url=f"https://t.me/ValiyevAli",
+                        url=f"https://t.me/teamabasof",
                     )
                 ],
                 [
