@@ -58,7 +58,7 @@ async def play(c: Client, m: Message):
         [
             [
                 InlineKeyboardButton(text="❄️ Menyu", callback_data="cbmenu"),
-                InlineKeyboardButton(text="🎄 Bağla", callback_data="cls"),
+                InlineKeyboardButton(text="⚡️ Bağla", callback_data="cls"),
             ]
         ]
     )
@@ -141,7 +141,7 @@ async def play(c: Client, m: Message):
                 )
             else:
              try:
-                await suhu.edit("☃️ **Asistan səsli söhbətə qoşulur...**")
+                await suhu.edit("⚡️ **Asistan səsli söhbətə qoşulur...**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioPiped(
@@ -191,7 +191,7 @@ async def play(c: Client, m: Message):
                             )
                         else:
                             try:
-                                await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
+                                await suhu.edit("⚡️ **Asistan səsli söhbətə qoşulur...**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -242,7 +242,7 @@ async def play(c: Client, m: Message):
                         )
                     else:
                         try:
-                            await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
+                            await suhu.edit("⚡️ **Asistan səsli söhbətə qoşulur...**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
@@ -273,7 +273,7 @@ async def stream(c: Client, m: Message):
         [
             [
                 InlineKeyboardButton(text="❄️ Menyu", callback_data="cbmenu"),
-                InlineKeyboardButton(text="🎄 Bağla", callback_data="cls"),
+                InlineKeyboardButton(text="⚡️ Bağla", callback_data="cls"),
             ]
         ]
     )
@@ -336,7 +336,7 @@ async def stream(c: Client, m: Message):
         await m.reply("» give me a live-link/m3u8 url/youtube link to stream.")
     else:
         link = m.text.split(None, 1)[1]
-        suhu = await c.send_message(chat_id, "🎄 **processing stream...**")
+        suhu = await c.send_message(chat_id, "⚡️ **processing stream...**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
@@ -360,7 +360,7 @@ async def stream(c: Client, m: Message):
                 )
             else:
                 try:
-                    await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
+                    await suhu.edit("⚡️ **Asistan səsli söhbətə qoşulur...**")
                     await call_py.join_group_call(
                         chat_id,
                         AudioPiped(
