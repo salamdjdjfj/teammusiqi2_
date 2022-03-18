@@ -49,7 +49,7 @@ async def skip(client, m: Message):
                     text="❄️ Menyu", callback_data="cbmenu"
                 ),
                 InlineKeyboardButton(
-                    text="🎄 Bağla", callback_data="cls"
+                    text="⚡️ Bağla", callback_data="cls"
                 ),
             ]
         ]
