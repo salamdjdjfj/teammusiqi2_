@@ -141,7 +141,7 @@ async def play(c: Client, m: Message):
                 )
             else:
              try:
-                await suhu.edit("⚡️ **Asistan səsli söhbətə qoşulur...**")
+                await suhu.edit("☃️ **Asistan səsli söhbətə qoşulur...**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioPiped(
