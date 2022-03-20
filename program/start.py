@@ -87,7 +87,23 @@ Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izl�
         disable_web_page_preview=True,
     )
 
-
+@Client.on_message(filters.command("help"))
+async def help_(_, msg: Message):
+    await msg.reply(
+        f"""❓ **Basic Guide for using this bot:**
+1.) **First, add me to your group.**
+2.) **Then, promote me as administrator and give all permissions except Anonymous Admin.**
+3.) **After promoting me, type /reload in group to refresh the admin data.**
+3.) **Add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.**
+4.) **Turn on the video chat first before start to play video/music.**
+5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
+📌 **If the userbot not joined to video chat, make sure if the video chat already turned on, or type /userbotleave then type /userbotjoin again.**
+💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @{GROUP_SUPPORT}**
+⚡ __Powered by {BOT_NAME} A.I__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("📚 Commands", callback_data="cbcmds")]]
+        ),
+    )
 
 @Client.on_message(filters.new_chat_members)
 async def new_chat(c: Client, m: Message):
