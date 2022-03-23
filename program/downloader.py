@@ -139,14 +139,14 @@ async def vsong(client, message):
 async def lyrics(_, message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("» **give a lyric name too.**")
+            await message.reply_text("» **mahnı adı da ver.**")
             return
         query = message.text.split(None, 1)[1]
-        rep = await message.reply_text("🔎 **searching lyrics...**")
+        rep = await message.reply_text("🔎 **mahnının sözləri axtarılır...**")
         resp = requests.get(
             f"https://api-tede.herokuapp.com/api/lirik?l={query}"
         ).json()
         result = f"{resp['data']}"
         await rep.edit(result)
     except Exception:
-        await rep.edit("❌ **results of lyric not found.**\n\n» **please give a valid song name.**")
+        await rep.edit("❌ **Mahnı sözlərinin nəticələri tapılmadı.**\n\n» **zəhmət olmasa düzgün mahnı adı verin.**")
