@@ -17,9 +17,9 @@ async def clear_downloads(_, message: Message):
     if ls_dir:
         for file in os.listdir(downloads):
             os.remove(os.path.join(downloads, file))
-        await message.reply_text("✅ **deleted all downloaded files**")
+        await message.reply_text("✅ **bütün yüklənmiş fayllar silindi**")
     else:
-        await message.reply_text("❌ **no files downloaded**")
+        await message.reply_text("❌ **heç bir fayl yüklənmədi**")
 
         
 @Client.on_message(command(["rmw", "clean"]) & ~filters.edited)
@@ -45,6 +45,6 @@ async def cleanup(_, message: Message):
     if ls_dir:
         for dta in os.listdir(pth):
             os.system("rm -rf *.raw *.jpg")
-        await message.reply_text("✅ **cleaned**")
+        await message.reply_text("✅ **təmizləndi**")
     else:
-        await message.reply_text("✅ **already cleaned**")
+        await message.reply_text("✅ **artıq təmizlənib**")
