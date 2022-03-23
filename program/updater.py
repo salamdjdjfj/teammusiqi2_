@@ -53,10 +53,10 @@ def updater():
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
-    msg = await message.reply("🔄 `processing update...`")
+    msg = await message.reply("🔄 `yeniləmə işlənir...`")
     update_avail = updater()
     if update_avail:
-        await msg.edit("✅ update finished\n\n• bot restarted, back active again in 1 minutes.")
+        await msg.edit("✅ yeniləmə bitdi\n\n• bot yenidən başladı, 1 dəqiqə sonra yenidən aktiv.")
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
@@ -66,8 +66,8 @@ async def update_repo(_, message: Message):
 @Client.on_message(command(["restart", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only
 async def restart_bot(_, message: Message):
-    msg = await message.reply("`restarting bot...`")
+    msg = await message.reply("`bot yenidən başlayır...`")
     args = [sys.executable, "main.py"]
-    await msg.edit("✅ bot restarted\n\n• now you can use this bot again.")
+    await msg.edit("✅ bot yenidən başladı \n\n• indi sən bu botu yenidən işlədə bilərsən.")
     execle(sys.executable, *args, environ)
     return
